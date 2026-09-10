@@ -1,0 +1,100 @@
+/* ============================================
+   COLORS.CSS - Color Variables & Theme System
+   Production-Ready Educational Website
+   ============================================ */
+
+:root {
+  /* Primary Colors */
+  --primary-color: #0066cc;
+  --primary-light: #e6f0ff;
+  --primary-dark: #004299;
+  --primary-hover: #0052a3;
+  
+  /* Secondary Colors */
+  --secondary-color: #00d4ff;
+  --secondary-light: #e0f9ff;
+  --secondary-dark: #0099cc;
+  
+  /* Neutral Colors */
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --light-gray: #e9ecef;
+  --medium-gray: #6c757d;
+  --dark-gray: #343a40;
+  --text-dark: #1a1a1a;
+  
+  /* Accent Colors */
+  --success-color: #10b981;
+  --success-light: #d1fae5;
+  --danger-color: #ef4444;
+  --danger-light: #fee2e2;
+  --warning-color: #f59e0b;
+  --warning-light: #fef3c7;
+  --info-color: #3b82f6;
+  --info-light: #dbeafe;
+  
+  /* Background Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  --gradient-subtle: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+  
+  /* Shadow System */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  
+  /* Border Colors */
+  --border-color: #e0e0e0;
+  --border-light: #f0f0f0;
+  
+  /* Transparency Variants */
+  --primary-rgba-10: rgba(0, 102, 204, 0.1);
+  --primary-rgba-20: rgba(0, 102, 204, 0.2);
+  --primary-rgba-5: rgba(0, 102, 204, 0.05);
+  
+  /* Animation & Transition */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Spacing (for consistency) */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Z-Index Stack */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal: 1040;
+  --z-popover: 1050;
+  --z-tooltip: 1070;
+}
+
+/*
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-dark: #f0f0f0;
+    --off-white: #1a1a1a;
+    --light-gray: #2d2d2d;
+    --medium-gray: #b0b0b0;
+    --dark-gray: #e0e0e0;
+  }
+}
+
+*/
