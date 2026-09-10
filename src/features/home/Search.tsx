@@ -48,29 +48,161 @@ export default function StudentSearch(){
         }
     };
     
-    return (
-        <div className="main-h-screen flex items-center justify-center bg-gray-50">
-            <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-md">
-                <h1 className="text-2xl font-bold text-center mb-6">Search Student</h1>
 
-                <div className="space-y-4">
-                    <input type="number" placeholder="Enter your roll" value={roll} 
-                    onChange={(e) => setRoll(e.target.value)}
-                    onKeyDown={(e) => {
-                        if(e.key === "Enter"){
-                            handleSearch();
-                        }
+
+return (
+    <div
+        className="min-h-screen flex items-center justify-center px-4"
+        style={{ backgroundColor: "var(--off-white)" }}
+    >
+        <div className="w-full max-w-xl">
+
+            <div
+                className="overflow-hidden rounded-2xl"
+                style={{
+                    backgroundColor: "var(--white)",
+                    border: "1px solid var(--border-light)",
+                    boxShadow: "var(--shadow-xl)",
+                }}
+            >
+
+                {/* Header */}
+                <div
+                    className="px-8 py-10 text-center"
+                    style={{
+                        background: "var(--gradient-primary)",
                     }}
+                >
+                    <div
+                        className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full"
+                        style={{
+                            backgroundColor: "rgba(255, 255, 255, 0.2)",
+                        }}
+                    >
+                        <svg
+                            className="h-8 w-8 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M21 21l-4.35-4.35m2.35-5.65a8 8 0 11-16 0 8 8 0 0116 0z"
+                            />
+                        </svg>
+                    </div>
 
-                    className="w-full px-4 py-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    <button onClick={handleSearch} disabled={loading} className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-700 disabled:opacity-50"> {loading ? "Searching...":"Search"}</button>
+                    <h1 className="text-3xl font-bold text-white">
+                        Search Student Result
+                    </h1>
 
-                    {error &&(
-                        <p>{error}</p>
-                    )}
+                    <p className="mt-3 text-sm text-white/85">
+                        Enter your roll number to view your academic result
+                    </p>
+                </div>
+
+                {/* Form */}
+                <div className="p-8 sm:p-10">
+
+                    <div className="space-y-6">
+
+                        {/* Roll Input */}
+                        <div>
+                            <label
+                                htmlFor="roll"
+                                className="mb-2 block text-sm font-semibold"
+                                style={{
+                                    color: "var(--dark-gray)",
+                                }}
+                            >
+                                Student Roll Number
+                            </label>
+
+                            <input
+                                id="roll"
+                                type="number"
+                                placeholder="Enter your roll number"
+                                value={roll}
+                                onChange={(e) => setRoll(e.target.value)}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter") {
+                                        handleSearch();
+                                    }
+                                }}
+                                className="w-full rounded-xl px-4 py-4 outline-none transition-all"
+                                style={{
+                                    backgroundColor: "var(--off-white)",
+                                    border: "1px solid var(--border-color)",
+                                    color: "var(--text-dark)",
+                                }}
+                                onFocus={(e) => {
+                                    e.currentTarget.style.borderColor =
+                                        "var(--primary-color)";
+                                    e.currentTarget.style.boxShadow =
+                                        "0 0 0 4px var(--primary-rgba-10)";
+                                }}
+                                onBlur={(e) => {
+                                    e.currentTarget.style.borderColor =
+                                        "var(--border-color)";
+                                    e.currentTarget.style.boxShadow = "none";
+                                }}
+                            />
+                        </div>
+
+                        {/* Search Button */}
+                        <button
+                            onClick={handleSearch}
+                            disabled={loading}
+                            className="w-full rounded-xl py-4 font-semibold text-white transition-all duration-300"
+                            style={{
+                                background: "var(--gradient-primary)",
+                                boxShadow: "var(--shadow-md)",
+                                opacity: loading ? 0.6 : 1,
+                                cursor: loading ? "not-allowed" : "pointer",
+                            }}
+                        >
+                            {loading ? "Searching..." : "Search Result"}
+                        </button>
+
+                        {/* Error */}
+                        {error && (
+                            <div
+                                className="rounded-xl px-4 py-3"
+                                style={{
+                                    backgroundColor: "var(--danger-light)",
+                                    border: "1px solid var(--danger-color)",
+                                }}
+                            >
+                                <p
+                                    className="text-sm font-medium"
+                                    style={{
+                                        color: "var(--danger-color)",
+                                    }}
+                                >
+                                    {error}
+                                </p>
+                            </div>
+                        )}
+
+                    </div>
+
+                    <p
+                        className="mt-6 text-center text-xs"
+                        style={{
+                            color: "var(--medium-gray)",
+                        }}
+                    >
+                        Enter your valid student roll number to continue
+                    </p>
+
                 </div>
             </div>
+
         </div>
-    )
+    </div>
+);
+
+
 }
