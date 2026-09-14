@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 
 import type { StudentDataType } from "../../TypeScript/StudentDataType/StudentData"
 import { useEffect, useState } from "react";
-import StudentDashboardHome from "../student-dashboard/StudentDashboardHome";
+import StudentDashboardHome from "../../Pages/StudentDashboard/StudentDashboardHome";
 
 
 export default function StudentDashboard(){

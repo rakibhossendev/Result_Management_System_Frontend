@@ -1,6 +1,6 @@
 
 import type { StudentDataType } from "../../TypeScript/StudentDataType/StudentData";
-import StudentDashboardNavCard from "./Card";
+import StudentDashboardNavCard from "../../Components/StudentDashboardCard/Card";
 
 interface StudentDataProps {
   student: StudentDataType | null;

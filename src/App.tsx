@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css'
-import Home from './Components/ui/Home'
+import Home from './Pages/Home/Home'
 import StudentDashboardURL from './features/student-dashboard/DashboardUrl'
 import "react-toastify/dist/ReactToastify.css";
  import { ToastContainer} from 'react-toastify';
