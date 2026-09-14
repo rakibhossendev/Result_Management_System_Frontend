@@ -1,4 +1,3 @@
-
 /* =========================================================
    GLOBAL ANIMATION SYSTEM
    ========================================================= */
@@ -98,6 +97,7 @@
    ========================================================= */
 
 @keyframes float {
+
     0%,
     100% {
         transform: translateY(0);
@@ -114,6 +114,7 @@
    ========================================================= */
 
 @keyframes pulseSoft {
+
     0%,
     100% {
         transform: scale(1);
@@ -162,6 +163,7 @@
    ========================================================= */
 
 @keyframes glow {
+
     0%,
     100% {
         box-shadow: 0 0 0 rgba(0, 102, 204, 0);
@@ -331,28 +333,28 @@
    STAGGER ANIMATION
    ========================================================= */
 
-.stagger > * {
+.stagger>* {
     opacity: 0;
     animation: fadeInUp 0.7s var(--animation-ease) forwards;
 }
 
-.stagger > *:nth-child(1) {
+.stagger>*:nth-child(1) {
     animation-delay: 100ms;
 }
 
-.stagger > *:nth-child(2) {
+.stagger>*:nth-child(2) {
     animation-delay: 200ms;
 }
 
-.stagger > *:nth-child(3) {
+.stagger>*:nth-child(3) {
     animation-delay: 300ms;
 }
 
-.stagger > *:nth-child(4) {
+.stagger>*:nth-child(4) {
     animation-delay: 400ms;
 }
 
-.stagger > *:nth-child(5) {
+.stagger>*:nth-child(5) {
     animation-delay: 500ms;
 }
 
@@ -362,6 +364,7 @@
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -378,13 +381,11 @@
 
 .ticket-divider {
     height: 1px;
-    background-image: repeating-linear-gradient(
-        to right,
-        var(--border-color) 0,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 12px
-    );
+    background-image: repeating-linear-gradient(to right,
+            var(--border-color) 0,
+            var(--border-color) 6px,
+            transparent 6px,
+            transparent 12px);
 }
 
 .ticket-notch-top,

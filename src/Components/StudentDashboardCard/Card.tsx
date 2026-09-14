@@ -1,11 +1,14 @@
 import { FiAward, FiBarChart2, FiCalendar } from "react-icons/fi";
+import {Link,useParams } from "react-router-dom";
 
 export default function StudentDashboardNavCard() {
+  const {roll} = useParams<{roll: string}>();
+
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-3">
       {/* Attendance Card */}
-      <a
-        href="/student/attendance"
+      <Link
+        to={`/student/attendance/${roll}`}
         className="group rounded-[var(--radius-xl)] border border-[var(--border-light)] bg-[var(--white)] p-6 shadow-[var(--shadow-sm)] transition-all duration-300 ease-[var(--ease-smooth)] hover:-translate-y-1 hover:border-[var(--primary-rgba-20)] hover:shadow-[var(--shadow-lg)]"
       >
         <div className="flex items-center justify-between">
@@ -30,7 +33,7 @@ export default function StudentDashboardNavCard() {
         <div className="mt-5 text-sm font-semibold text-[var(--primary-color)]">
           View Details
         </div>
-      </a>
+      </Link>
 
       {/* Marks Card */}
       <a
